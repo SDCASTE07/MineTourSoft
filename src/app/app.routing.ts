@@ -5,14 +5,17 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { ComponentsComponent } from './components/components.component';
 import { SigninComponent } from './examples/signin/signin.component';
-import {DashComponent} from './examples/dash/dash.component'
+import { DashComponent } from './examples/dash/dash.component'
 import {AuthGuard} from './AuthGuard'
-
+import {NewsupervisorComponent} from './examples/newsupervisor/newsupervisor.component'
+import {PlanesComponent} from './examples/planes/planes.component'
 const routes: Routes =[
     { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: 'home', component: ComponentsComponent },
     { path: 'signin', component: SigninComponent },
-    { path: 'dash', component: DashComponent, canActivate: [AuthGuard] }
+    { path: 'dash', component: DashComponent, canActivate: [AuthGuard] },
+    { path: 'newsuper', component: NewsupervisorComponent, canActivate: [AuthGuard] },
+    { path: 'planes', component: PlanesComponent, canActivate: [AuthGuard] }
 ];
 
 @NgModule({

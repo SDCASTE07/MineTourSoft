@@ -25,6 +25,14 @@ export class ComponentsService {
     const url =`${environment.url}/planes`;
     return this.http.get(url) 
   }
+  crearplan(param : any): Observable<any> {
+    const url =`${environment.url}/planes/guardarPlan`;
+    return this.http.post(url, param) 
+  }
+  crearSupervisor(param : any): Observable<any> {
+    const url =`${environment.url}/sign-up`;
+    return this.http.post(url, param) 
+  }
 
   private createAuthorizationHeader() {
     const jwtToken = localStorage.getItem('JWT');

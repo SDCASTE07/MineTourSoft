@@ -1,0 +1,87 @@
+<!--Main Navigation-->
+<header>
+    <!-- Sidebar -->
+    <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-dark">
+        <div class="position-sticky position-sticky mt-5">
+            <div class="list-group list-group-flush mx-3 mt-4" style="font-size: 18px;">
+                <a style="color: #7c9af4;" href="/#/dash" class="list-group-item list-group-item-action py-2 ripple bg-dark >">
+                    <i class="fas fa-chart-bar fa-fw me-3"></i><span>Dashboard</span></a> 
+                <a style="color: #7c9af4;" href="/#/newsuper" class="list-group-item list-group-item-action py-2 ripple bg-dark >">
+                         <i class="fas fa-chart-bar fa-fw me-3"></i><span>Crear supervisor</span></a>
+                <a style="color: #7c9af4;" href="/#/planes" class="list-group-item list-group-item-action py-2 ripple bg-dark >">
+                         <i class="fas fa-chart-bar fa-fw me-3"></i><span>Planes</span></a>                
+            </div>
+        </div>
+    </nav>
+    <!-- Sidebar -->
+
+    <!-- Navbar -->
+    <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light bg-dark fixed-top">
+        <!-- Container wrapper -->
+        <div class="container-fluid bg-dark">
+            <!-- Brand -->
+            <a class="navbar-brand" href="#">
+                <h3>MINETOURSOFT</h3>
+            </a>  
+            <!-- Right links -->
+            <ul class="navbar-nav ms-auto d-flex flex-row">    
+
+                <!-- Avatar -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle hidden-arrow d-flex align-items-center" href="#"
+                        id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                        <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img (31).webp" class="rounded-circle"
+                            height="40" alt="Avatar" loading="lazy" />
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+
+                        <li>
+                            <a class="dropdown-item" href="#">Logout</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- Container wrapper -->
+    </nav>
+    <!-- Navbar -->
+</header>
+<!--Main Navigation-->
+
+<!--Main layout-->
+<main>
+    <div class="page-header" style="background-image: url('./assets/img/login-image.jpg');">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-sm-6 mr-auto ml-auto">
+              <div class="card card-register">
+                  <h3 class="title">Crear planes</h3>                  
+                  <form class="register-form" [formGroup]="form">
+                      <label>plan</label>
+                      <div class="input-group form-group-no-border" >
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">
+                              <i class="nc-icon nc-atom"></i>
+                          </span>
+                        </div>
+
+                          <input type="text" class="form-control" placeholder="plan"  formControlName="plan" >
+                      </div>
+
+                      <label>precio</label>
+                      <div class="input-group form-group-no-border" >
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">
+                              <i class="nc-icon nc-money-coins"></i>
+                          </span>
+                        </div>
+                          <input type="text" class="form-control" placeholder="precio" formControlName="precio" >
+                      </div>
+                      <button class="btn btn-danger btn-block btn-round" (click)="crearplan()">Crean plan</button>
+                  </form>                  
+              </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</main>

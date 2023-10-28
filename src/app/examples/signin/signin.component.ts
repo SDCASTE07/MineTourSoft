@@ -48,8 +48,7 @@ export class SigninComponent implements OnInit {
           }
         },(err)=>{
           alert("usuario o clave incorrecta")
-      })
-        }
+      })}
         
-      }
+  }
 }

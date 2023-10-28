@@ -13,11 +13,11 @@ export class DashComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.guardarReserva()
+    this.ListarReserva()
   }
 
 
-  guardarReserva() {
+  ListarReserva() {
     this.componentsService.listar().subscribe((rest) => {     
       this.reservas =rest.response
     }, (err) => {
