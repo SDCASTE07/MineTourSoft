@@ -18,6 +18,10 @@ body {
   width: 240px;
   z-index: 600;
 }
+#tabla1{
+  overflow:scroll;
+     height: 450px;
+}
 
 @media (max-width: 991.98px) {
   .sidebar {

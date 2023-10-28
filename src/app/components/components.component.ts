@@ -16,6 +16,7 @@ import { param } from 'jquery';
 
 export class ComponentsComponent implements OnInit {
     form: FormGroup;
+    precios={};
     page = 4;
     page1 = 5;
     focus;
@@ -58,6 +59,7 @@ export class ComponentsComponent implements OnInit {
                 input_group[i].classList.remove('input-group-focus');
             });
         }
+        this.listarPlanes()
     }
 
     guardarReserva(){             
@@ -87,6 +89,13 @@ export class ComponentsComponent implements OnInit {
             console.log(err)
         })
      }
+   }
+
+   listarPlanes(){
+    this.componentsService.listarPlanes().subscribe((rest)=>{
+        console.log(rest.response);
+        this.precios=rest.response;
+    })
    }
 
 }

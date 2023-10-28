@@ -21,6 +21,11 @@ export class ComponentsService {
     return this.http.get(url) 
   }
 
+  listarPlanes(): Observable<any> {
+    const url =`${environment.url}/planes`;
+    return this.http.get(url) 
+  }
+
   private createAuthorizationHeader() {
     const jwtToken = localStorage.getItem('JWT');
     if (jwtToken) {
