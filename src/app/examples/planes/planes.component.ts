@@ -33,7 +33,7 @@ export class PlanesComponent implements OnInit {
           precio:precio
         };
         this.componentsService.crearplan(param).subscribe((response) => {
-      console.log(response);     
+          alert("creado con exito")
     },(err)=>{
       alert("no se pudo crear")
   })}
