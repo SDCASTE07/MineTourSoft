@@ -7,6 +7,8 @@
     "url": "https://github.com/creativetimofficial/pk2-angular.git"
   },
   "scripts": {
+    "npm intall":"npm i --force", 
+    "npm i":"npm i --force",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
