@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ComponentsService } from "app/components/components.service"
+import { ComponentsService } from "../../components/components.service"   
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -25,8 +25,8 @@ export class PlanesComponent implements OnInit {
   crearplan() {
     console.log("entro")
     if (this.form.valid) {
-        const plan =this.form.get('plan').value;
-        const precio =this.form.get('precio').value  
+        const plan =this.form.get('plan')?.value
+        const precio =this.form.get('precio')?.value
                   
         const param={
           categoria:plan,
@@ -34,9 +34,7 @@ export class PlanesComponent implements OnInit {
         };
         this.componentsService.crearplan(param).subscribe((response) => {
           alert("creado con exito")
-    },(err)=>{
-      alert("no se pudo crear")
-  })}
+    })}
     
 }
 

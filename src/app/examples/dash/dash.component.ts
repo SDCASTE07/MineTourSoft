@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ComponentsService } from "app/components/components.service"
+import { ComponentsService } from "../../../app/components/components.service"
 
 @Component({
   selector: 'app-dash',
@@ -20,8 +20,6 @@ export class DashComponent implements OnInit {
   ListarReserva() {
     this.componentsService.listar().subscribe((rest) => {     
       this.reservas =rest.response
-    }, (err) => {
-      console.log(err)
     })
   }
 

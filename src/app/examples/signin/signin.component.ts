@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import {AuthService} from "../signin/service/auth.service"
 import { Router } from '@angular/router';
-import { debug } from 'console';
-
 @Component({
     selector: 'app-signin',
     templateUrl: './signin.component.html',
@@ -11,8 +9,6 @@ import { debug } from 'console';
 })
 export class SigninComponent implements OnInit {
     test : Date = new Date();
-    focus;
-    focus1;
     form: FormGroup;
     constructor(
         private readonly formBuilder: FormBuilder,
@@ -32,8 +28,8 @@ export class SigninComponent implements OnInit {
     login() {
         console.log("entro")
         if (this.form.valid) {
-            const email =this.form.get('email').value;
-            const password =this.form.get('password').value  
+            const email =this.form.get("email")?.value       
+            const password =this.form.get("password")?.value
                       
             const loginRequest={
                 email:email,
@@ -46,9 +42,9 @@ export class SigninComponent implements OnInit {
             localStorage.setItem('JWT', jwtToken);
             this.router.navigate(['/dash']);
           }
-        },(err)=>{
-          alert("usuario o clave incorrecta")
-      })}
+        }
+
+        )}
         
   }
 }

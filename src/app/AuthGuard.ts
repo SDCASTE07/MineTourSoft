@@ -7,6 +7,7 @@ export class AuthGuard implements CanActivate {
 
   canActivate(): boolean {
     if (localStorage.getItem('JWT')) {
+      return true;
     } else {
       this.router.navigate(['/signin']);
       return false;

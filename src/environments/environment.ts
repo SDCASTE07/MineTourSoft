@@ -5,5 +5,5 @@
 
 export const environment = {
   production: false,
-  url:"https://back-mtsoft-03b9b05593a5.herokuapp.com/"
+  url:"http://localhost:8080"
 };
