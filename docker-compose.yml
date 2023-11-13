@@ -1,0 +1,17 @@
+version: '3.5'
+
+services:
+  trunkall-frontend:
+    build: .
+    container_name: trunkall-frontend
+    image: trunkall-frontend:1
+    restart: always
+    env_file: .env
+    ports:
+      - 80:80
+      - 443:443
+    expose:
+      - 80
+      - 443
+    volumes:
+      - /opt/cert:/etc/nginx/certs
